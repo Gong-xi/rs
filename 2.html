@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Foo(){
+        this.print= function () {
+            console.log(1)
+        }
+        return this
+    }
+    Foo.print= function () {
+        console.log(2)
+    }
+    Foo.print();
+    new Foo.print();
+
+    print();
+    new Foo().print();
+     Foo().Foo.print()
+    function print(){
+        console.log(3)
+    }
+
+    var print=function(){
+        console.log(4)
+    }
+    print()
+</script>
+</body>
+</html>
